@@ -1,0 +1,24 @@
+{
+    "name": "Decoder",
+    "version": "0.1.0",
+    "manifest_version": 3,
+    "description": "Decode base64",
+    "permissions": [
+      "contextMenus",
+      "tabs"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["contentScript.js"]
+        }
+    ],
+    "icons": {
+      "16": "assets/decode.png",
+      "48": "assets/decode.png",
+      "128": "assets/decode.png"
+    }
+  }
